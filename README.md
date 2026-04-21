@@ -278,11 +278,6 @@ should be treated as online key material.
 
 See [SECURITY.md](SECURITY.md) for vulnerability reporting guidance.
 
-## 📜 License
-
-No license has been selected yet. Choose and add a license before announcing the
-project as open source.
-
 
 <pre>
                                                        ▁▂▃▄▄▄▃▂▁                                    
