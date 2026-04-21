@@ -1,0 +1,44 @@
+target/
+
+# Local docs/notes that are not public-ready.
+GUIDE.md
+kraken.txt
+
+# OS/editor/local tooling artifacts.
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+.claude/
+
+# Environment and credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Runtime data and generated sensitive outputs.
+*.log
+splitbot.log
+vault.bin
+*.bin.tmp
+last-order.json
+exports/
+*.wallet
+*.seed
+*.mnemonic
+
+# Build/cache outputs.
+.cache/
+tmp/
+temp/
