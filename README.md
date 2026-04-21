@@ -37,6 +37,21 @@ correctly.
 On first launch, create a vault passphrase and enter a SplitNOW API key from
 your SplitNOW account. Later launches ask only for the vault passphrase.
 
+## 📦 Install from crates.io
+
+`splitbot` is published on [crates.io](https://crates.io/crates/splitbot).
+Install it with Cargo:
+
+```sh
+cargo install splitbot
+```
+
+Then run:
+
+```sh
+splitbot
+```
+
 ## 🖥️ Terminal Support
 
 `splitbot` runs in modern interactive terminals on macOS, Linux, and Windows.
