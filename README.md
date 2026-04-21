@@ -17,7 +17,7 @@ multi-destination split swaps across chains, and poll the latest order status. C
 
 - 🖥️ Terminal UI built with Ratatui.
 - 🔐 Local encrypted vault for the SplitNOW API key and wallet secrets.
-- 👛 Wallet generation/import for Solana, EVM, Bitcoin, and Monero.
+- 👛 Wallet generation, import, labeling, export, and swap-destination reuse.
 - 🔁 Single swap flow for one destination address.
 - 🧮 Multi-swap flow for splitting one deposit across multiple destination rows.
 - 📡 Order status polling for the most recent order.
@@ -36,6 +36,42 @@ correctly.
 
 On first launch, create a vault passphrase and enter a SplitNOW API key from
 your SplitNOW account. Later launches ask only for the vault passphrase.
+
+## 🍎 macOS Terminal
+
+Ghostty is the recommended terminal for running `splitbot` on macOS. It provides
+the modern terminal behavior, rendering, and keyboard handling expected by the
+TUI.
+
+Install Ghostty from the official site:
+
+```text
+https://ghostty.org/
+```
+
+## 👛 Wallet Management
+
+`splitbot` includes a local hot-wallet manager for addresses you want to use
+with swaps and split payouts. Wallets are stored in the encrypted vault with
+your SplitNOW API key and can be managed directly from the terminal UI.
+
+Users can:
+
+- Generate new Solana, EVM, Bitcoin, and Monero wallets without installing the
+  chain CLIs.
+- Import existing wallets using Solana base58 secrets, EVM private key hex,
+  Bitcoin WIF, or Monero private spend/view keys.
+- Label, rename, inspect, and delete saved wallets.
+- Copy wallet addresses for deposits, withdrawals, or external verification.
+- Reveal and copy private wallet secrets when needed for manual backup or
+  migration.
+- Export one wallet as JSON or export all wallets as a Markdown backup file.
+- Add a saved wallet directly to a multi-swap destination row.
+- Generate a fresh destination wallet from the single-swap or multi-swap flow
+  and save it back into the vault.
+
+The Account screen can also summarize native SOL balances across Solana wallets
+stored in the vault.
 
 ## 🧰 Toolchain Setup
 
