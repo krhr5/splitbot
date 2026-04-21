@@ -1,0 +1,10 @@
+Copyright (c) 2026 splitbot contributors.
+
+All rights reserved.
+
+This software is published for visibility and personal use. No permission is
+granted to copy, modify, sublicense, sell, or distribute this software except as
+required to download, build, and run the published package for personal use.
+
+SplitNOW is a separate service. This project is not an official SplitNOW
+product unless stated otherwise by SplitNOW.

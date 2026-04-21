@@ -9,7 +9,7 @@
 
 # 🤖 splitbot
 
-`splitbot` is a terminal UI for quick multichain bridging, swaps and local hot-wallet management. We utilize the SplitNOW API, with access to their deep network of CEXs, OTC desks, and instant exchangers.
+`splitbot` is a terminal UI for quick multichain bridging, swaps and local hot-wallet management. It is powered by the [SplitNOW](https://splitnow.io/) API, with access to their deep network of CEXs, OTC desks, and instant exchangers.
 It can create or import wallets, prepare single-destination swaps, prepare
 multi-destination split swaps across chains, and poll the latest order status. Currently supporting Solana, EVM, Bitcoin and Monero ecosystems.
 
@@ -277,6 +277,11 @@ should be treated as online key material.
   messages.
 
 See [SECURITY.md](SECURITY.md) for vulnerability reporting guidance.
+
+
+## 📜 License
+
+See [LICENSE.txt](LICENSE.txt).
 
 
 <pre>
