@@ -6,7 +6,7 @@ use crate::ui::components::{
 };
 use crate::ui::status::{progress_line, wallets_line};
 use crate::wallet;
-use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
+use crossterm::event::{KeyCode, KeyEvent};
 use ratatui::Frame;
 use ratatui::layout::{Constraint, Direction, Layout, Rect};
 use ratatui::style::{Color, Modifier, Style};
@@ -16,7 +16,7 @@ use splitnow::WalletDistribution;
 use tui_input::backend::crossterm::EventHandler;
 
 pub fn render(frame: &mut Frame, app: &App) {
-    let hints = "`Tab/Shift+Tab` field  ·  `←→` row field  ·  `↑↓` row  ·  `a` add row  ·  `Del` remove  ·  `g` gen new wallet  ·  `Enter` review  ·  `Esc` back";
+    let hints = "`Tab/Shift+Tab` field  ·  `←→` row field  ·  `↑↓` row  ·  `a` add row  ·  `g` gen new wallet  ·  `Del` remove  ·  `Enter` review  ·  `Esc` back";
     let subtitle = format!("{} destinations", app.multi.rows.len());
     let body = chrome(frame, app, "Multi-Swap", &subtitle, hints);
 
@@ -244,14 +244,6 @@ pub fn handle_key(app: &mut App, key: KeyEvent) {
         app.screen = Screen::Home;
         return;
     }
-    if key.modifiers.contains(KeyModifiers::CONTROL) && key.code == KeyCode::Char('m') {
-        submit(app);
-        return;
-    }
-    if key.code == KeyCode::Enter && key.modifiers.contains(KeyModifiers::CONTROL) {
-        submit(app);
-        return;
-    }
     if key.code == KeyCode::Enter {
         app.multi.submit_confirm = true;
         return;
@@ -275,13 +267,13 @@ pub fn handle_key(app: &mut App, key: KeyEvent) {
             | MultiField::RowExchanger
     ) {
         match key.code {
-            KeyCode::Up if !key.modifiers.contains(KeyModifiers::SHIFT) => {
+            KeyCode::Up => {
                 if app.multi.selected_row > 0 {
                     app.multi.selected_row -= 1;
                 }
                 return;
             }
-            KeyCode::Down if !key.modifiers.contains(KeyModifiers::SHIFT) => {
+            KeyCode::Down => {
                 if app.multi.selected_row + 1 < app.multi.rows.len() {
                     app.multi.selected_row += 1;
                 }

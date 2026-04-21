@@ -102,8 +102,7 @@ screen. Press `Esc` from feature screens to return Home.
    asset/network, and exchanger.
 4. Use `a` to add rows, `Del` to remove rows, and make sure the destination
    percentages total `100.00%`.
-5. Press `Enter` to review, then press `y` to submit. You can also submit
-   directly with `Ctrl+Enter` or `Ctrl+m`.
+5. Press `Enter` to review, then press `y` to submit.
 6. Send the shown deposit amount to the shown deposit address and monitor the
    order status.
 
@@ -137,10 +136,9 @@ funds. Private keys copied or exported from the Wallets screen are hot secrets.
 | Multi-Swap | `←/→` | Change the focused picker value. |
 | Multi-Swap | `↑/↓` | Move between destination rows while focused on row fields. |
 | Multi-Swap | `a` | Add a destination row. |
-| Multi-Swap | `Del` | Remove a destination row. |
 | Multi-Swap | `g` | Generate a clean wallet for the selected row. |
+| Multi-Swap | `Del` | Remove a destination row. |
 | Multi-Swap | `Enter` | Review the swap. |
-| Multi-Swap | `Ctrl+Enter` or `Ctrl+m` | Submit immediately. |
 | Multi-Swap | `y` | Submit from the review prompt. |
 | Order Status | `r` | Refresh the latest order status. |
 | Order Status | `d` | Show or hide raw status details. |
