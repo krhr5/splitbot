@@ -52,6 +52,31 @@ Install Ghostty from the official site:
 https://ghostty.org/
 ```
 
+## 🧰 Toolchain Setup
+
+`splitbot` creates wallets internally with Rust libraries, so the chain CLIs
+below are not required just to generate addresses in the app. They are useful
+for verifying addresses, inspecting balances, running nodes, or spending funds
+outside `splitbot`.
+
+### 🦀 Rust
+
+Install Rust with `rustup`:
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+rustc --version
+cargo --version
+```
+
+On macOS, install Apple's command-line tools first if you do not already have a
+compiler toolchain:
+
+```sh
+xcode-select --install
+```
+
 ## 👛 Wallet Management
 
 `splitbot` includes a local hot-wallet manager for addresses you want to use
@@ -147,30 +172,6 @@ funds. Private keys copied or exported from the Wallets screen are hot secrets.
 | Account | `v` | Reveal or hide the API key. |
 | Account | `Enter` | Save while editing the API key. |
 
-## 🧰 Toolchain Setup
-
-`splitbot` creates wallets internally with Rust libraries, so the chain CLIs
-below are not required just to generate addresses in the app. They are useful
-for verifying addresses, inspecting balances, running nodes, or spending funds
-outside `splitbot`.
-
-### 🦀 Rust
-
-Install Rust with `rustup`:
-
-```sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source "$HOME/.cargo/env"
-rustc --version
-cargo --version
-```
-
-On macOS, install Apple's command-line tools first if you do not already have a
-compiler toolchain:
-
-```sh
-xcode-select --install
-```
 
 ### 🟣 Solana
 
