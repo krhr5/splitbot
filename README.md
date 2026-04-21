@@ -37,11 +37,14 @@ correctly.
 On first launch, create a vault passphrase and enter a SplitNOW API key from
 your SplitNOW account. Later launches ask only for the vault passphrase.
 
-## 🍎 macOS Terminal
+## 🖥️ Terminal Support
 
-Ghostty is the recommended terminal for running `splitbot` on macOS. It provides
-the modern terminal behavior, rendering, and keyboard handling expected by the
-TUI.
+`splitbot` runs in modern interactive terminals on macOS, Linux, and Windows.
+The terminal must support raw-mode keyboard input and Unicode rendering for the
+best TUI experience.
+
+On macOS, Ghostty is the recommended terminal. It provides the modern terminal
+behavior, rendering, and keyboard handling expected by the TUI.
 
 Install Ghostty from the official site:
 
@@ -72,6 +75,79 @@ Users can:
 
 The Account screen can also summarize native SOL balances across Solana wallets
 stored in the vault.
+
+## 🕹️ How To Use
+
+Start the TUI with `cargo run`, unlock or create your vault, and confirm your
+SplitNOW API key is configured. From Home, use `↑/↓` to choose Wallets, Single
+Swap, Multi-Swap, Order Status, or Account, then press `Enter` to open the
+screen. Press `Esc` from feature screens to return Home.
+
+### Execute a Single Swap
+
+1. Open **Single Swap** from Home.
+2. Enter the amount, then choose the source asset/network, destination
+   asset/network, and exchanger.
+3. Enter a destination address, or focus the destination field and press `g` to
+   generate a fresh wallet for the selected destination network.
+4. Press `Enter` to review the order, then press `y` to submit.
+5. Send the shown deposit amount to the shown deposit address and monitor the
+   order status.
+
+### Execute a Multi-Swap
+
+1. Open **Multi-Swap** from Home.
+2. Enter the source amount, source asset, and source network.
+3. Configure each destination row with an address, percent, destination
+   asset/network, and exchanger.
+4. Use `a` to add rows, `Del` to remove rows, and make sure the destination
+   percentages total `100.00%`.
+5. Press `Enter` to review, then press `y` to submit. You can also submit
+   directly with `Ctrl+Enter` or `Ctrl+m`.
+6. Send the shown deposit amount to the shown deposit address and monitor the
+   order status.
+
+Check destination addresses, order details, and deposit addresses before sending
+funds. Private keys copied or exported from the Wallets screen are hot secrets.
+
+### Hotkeys
+
+| Screen | Keys | Action |
+| --- | --- | --- |
+| Home | `↑/↓` | Move through menu items. |
+| Home | `Enter` | Open the selected screen. |
+| Home | `q` or `Esc` | Quit. |
+| Feature screens | `Esc` | Return Home or cancel the current prompt. |
+| Wallets | `g` | Generate a wallet. |
+| Wallets | `i` | Import a wallet. |
+| Wallets | `Enter` or `v` | View the selected wallet. |
+| Wallets | `c` or `y` | Copy the selected wallet address. |
+| Wallets | `r` | Rename in list view, or reveal/hide the secret in detail view. |
+| Wallets | `m` | Add the selected wallet to a multi-swap destination row. |
+| Wallets | `x` | Export all wallets. |
+| Wallets | `Del` | Delete the selected wallet. |
+| Wallet details | `p` | Copy the private secret. |
+| Wallet details | `e` | Export the selected wallet. |
+| Single Swap | `Tab` / `Shift+Tab` | Move between fields. |
+| Single Swap | `←/→` | Change the focused picker value. |
+| Single Swap | `g` | Generate a destination wallet when the destination field is focused. |
+| Single Swap | `Enter` | Review the swap. |
+| Single Swap | `y` | Submit from the review prompt. |
+| Multi-Swap | `Tab` / `Shift+Tab` | Move between fields. |
+| Multi-Swap | `←/→` | Change the focused picker value. |
+| Multi-Swap | `↑/↓` | Move between destination rows while focused on row fields. |
+| Multi-Swap | `a` | Add a destination row. |
+| Multi-Swap | `Del` | Remove a destination row. |
+| Multi-Swap | `g` | Generate a clean wallet for the selected row. |
+| Multi-Swap | `Enter` | Review the swap. |
+| Multi-Swap | `Ctrl+Enter` or `Ctrl+m` | Submit immediately. |
+| Multi-Swap | `y` | Submit from the review prompt. |
+| Order Status | `r` | Refresh the latest order status. |
+| Order Status | `d` | Show or hide raw status details. |
+| Account | `r` | Refresh balances. |
+| Account | `e` | Edit the SplitNOW API key. |
+| Account | `v` | Reveal or hide the API key. |
+| Account | `Enter` | Save while editing the API key. |
 
 ## 🧰 Toolchain Setup
 
