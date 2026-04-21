@@ -3,6 +3,7 @@ target/
 # Local docs/notes that are not public-ready.
 GUIDE.md
 kraken.txt
+pumpfun-jito-rust-integration-plan.md
 
 # OS/editor/local tooling artifacts.
 .DS_Store
