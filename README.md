@@ -46,11 +46,7 @@ best TUI experience.
 On macOS, Ghostty is the recommended terminal. It provides the modern terminal
 behavior, rendering, and keyboard handling expected by the TUI.
 
-Install Ghostty from the official site:
-
-```text
-https://ghostty.org/
-```
+Install Ghostty from the [official Ghostty site](https://ghostty.org/).
 
 ## 🧰 Toolchain Setup
 
@@ -212,11 +208,8 @@ macOS/Homebrew convenience command:
 brew install --cask bitcoin-core
 ```
 
-Official downloads and verification instructions:
-
-```text
-https://bitcoincore.org/en/download
-```
+See the official [Bitcoin Core downloads and verification
+instructions](https://bitcoincore.org/en/download).
 
 ### ⚫ Monero
 
@@ -232,11 +225,8 @@ monero-wallet-cli --version
 monerod --version
 ```
 
-Official downloads and verification instructions:
-
-```text
-https://www.getmonero.org/downloads/
-```
+See the official [Monero downloads and verification
+instructions](https://www.getmonero.org/downloads/).
 
 ## 📁 Local Data
 
